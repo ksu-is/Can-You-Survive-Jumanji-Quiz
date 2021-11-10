@@ -11,6 +11,9 @@ Similar projects sources:
 - [Buzzfeed-Quiz](https://github.com/ksu-is/Buzzfeed-Quiz)
 # Sprint 2:
 - [ ] Begin coding
+- Make code for quiz questions
+- Research more repositories and tutorials
+- Look into databases to implement into project
 - [ ] Make small updates and add commit messages
 - [ ] Commit at least 6 code changes
 - [ ] Track progress in project road map
