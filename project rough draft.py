@@ -7,27 +7,27 @@ character_choice = input("Which character do you want to play as (Choose a lette
 #Characters to choose from and their characteristics
 def characters(choice):
     if character_choice== "A":
-        strengths = "Fearless\nClimbing\nSpeed\nBoomerang\nSmoldering Intensity"
+        strengths = "Fearless, Climbing, Speed, Boomerang, Smoldering Intensity"
         weakness = "None"
         print("You are Dr.Smoulder Bravestone")
-        print("Strengths:\tWeakness:")
-        print(strengths, "\t", weakness)
+        print("Strengths:", strengths, "\nWeakness: ", weakness)
     elif character_choice == "B":
-        strengths = "Karate\nT*ai Chi\nAikido\nDance Fighting"
+        strengths = "Karate, T*ai Chi, Aikido, Dance Fighting"
         weakness = "Venom"
         print("You are Ruby Roundhouse")
-        print("Strengths:\tWeakness:")
-        print(strengths, "\t", weakness)
+        print("Strengths:", strengths, "\nWeakness: ", weakness)
     elif character_choice == "C":
-        strengths = "Cartography\nArchaeology\nPaleontology"
+        strengths = "Cartography, Archaeology, Paleontology"
         weakness= "Endurance"
         print("You are Professor Shelly Oberon")
-        print("Strengths:\tWeakness:")
-        print(strengths, "\t", weakness)
+        print("Strengths:", strengths, "\nWeakness: ", weakness)
     elif character_choice == "D":
-        strengths= "Zoology\nWeapons Valet"
-        weakness= "Cake\nSpeed\nStrength"
+        strengths= "Zoology, Weapons Valet"
+        weakness= "Cake, Speed, Strength"
         print("You are Franklin Finbar 'Mouse'")
-        print("Strengths:\tWeakness: ")
-        print(strengths, "\t", weakness)
+        print("Strengths:", strengths, "\nWeakness: ", weakness)       
 characters(character_choice)
+#Quiz questions and answers
+print("Now let the quiz begin.", "\nChoose a letter for each question.")
+print("Choose wisely!")
+def questions ()
