@@ -27,7 +27,16 @@ def characters(choice):
         print("You are Franklin Finbar 'Mouse'")
         print("Strengths:", strengths, "\nWeakness: ", weakness)       
 characters(character_choice)
-#Quiz questions and answers
+
 print("Now let the quiz begin.", "\nChoose a letter for each question.")
 print("Choose wisely!")
-def questions ()
+
+#Quiz questions
+def questions ():
+    question_1= input("There's a hippo coming up out of the water. What should you do?:\nA)Scream for help\nB)Run and hide\nC)Stay as still as possible\nD)Fight it")
+    question_2= input("You get three lives in Jumanji. What happens if you lose all the lives?:\nA)You die in the game and real life\nB)You get to leave the game\nC)You win the game\nD)Nothing happens")
+    question_3= input("A gang of motorcyclers starts chasing you and throwing grenades. What do you do?:\nA)Dodge the grenades\nB)Run\nC)Hide\nD)All of the above")
+    question_4= input("The motorcyclers have you cornered on the edge of a cliff by a waterfall. Do you:\nA)Surrender\n)Try to hide\nC)Jump into the water\nD)Try to fight them")
+    question_5= input("")
+    question_10= input("Good job! You've completed your quest. What must you do to leave the game?:\nA)Jump off the mountain\nB)Call out 'Jumanji'\nC)Nothing, you leave as soon as you get the Jumanji jewel\nD)Throw the jumanji jewel in the air")
+
