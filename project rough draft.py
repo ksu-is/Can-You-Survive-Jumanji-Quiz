@@ -2,6 +2,7 @@
 A quiz that asks questions and determines whether the user would survive Jumanji
 '''
 import time
+#import time and time.sleep() allows there to time between when the next line of code appears
 print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
 time.sleep(2)
 character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
@@ -59,3 +60,33 @@ answer_7= "C"
 answer_8= "A"
 answer_9= "D"
 answer_10= "B"
+
+#Code for testing if the quiz answers submitted by the user are correct
+correct = 0
+while True:
+    if question_1 == answer_1:
+        correct +=1
+    if question_2 == answer_2:
+        correct +=1
+    if question_3 == answer_3:
+        correct +=1
+    if question_4 == answer_4:
+        correct +=1
+    if question_5 == answer_5:
+        correct +=1
+    if question_6 == answer_6:
+        correct +=1
+    if question_7 == answer_7:
+        correct +=1
+    if question_8 == answer_8:
+        correct +=1
+    if question_9 == answer_9:
+        correct +=1
+    if question_10 == answer_10:
+        correct +=1
+    if correct >= 5:
+        print(correct, "/10")
+        print("Congratulations! You survived Jumanji.")
+       else:
+         print("Oh no! You didn't survive.")
+      
