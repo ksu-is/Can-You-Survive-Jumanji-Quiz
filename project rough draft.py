@@ -30,7 +30,7 @@ def characters(choice):
         print("You are Franklin Finbar 'Mouse'")
         print("Strengths:", strengths, "\nWeakness: ", weakness)       
 characters(character_choice)
-time.sleep(2)
+time.sleep(4)
 
 print("Now let the quiz begin.", "\nChoose a letter for each question.")
 time.sleep(1)
@@ -90,6 +90,7 @@ def results():
         return "Congratulations! You survived Jumanji."
     if correct <5:
         #print(correct, "/10")
-        return"Oh no! You didn't survive."
+        return"Oh no! You didn't survive.\nBetter luck next time."
 print(results())
+time.sleep(1)
 print("Thanks for playing.")    
