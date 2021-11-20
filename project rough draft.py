@@ -1,7 +1,9 @@
 '''
 A quiz that asks questions and determines whether the user would survive Jumanji
 '''
+import time
 print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
+time.sleep(2)
 character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
 
 #Characters to choose from and their characteristics
@@ -27,9 +29,12 @@ def characters(choice):
         print("You are Franklin Finbar 'Mouse'")
         print("Strengths:", strengths, "\nWeakness: ", weakness)       
 characters(character_choice)
+time.sleep(2)
 
 print("Now let the quiz begin.", "\nChoose a letter for each question.")
+time.sleep(1)
 print("Choose wisely!")
+time.sleep(1)
 
 #Quiz questions
 question_1= input("There's a hippo coming up out of the water. What should you do?:\nA)Scream for help\nB)Run and hide\nC)Stay as still as possible\nD)Fight it").upper()
