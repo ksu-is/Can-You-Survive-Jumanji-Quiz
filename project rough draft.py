@@ -119,15 +119,14 @@ root.title("Can You Survive?: Jumanji Quiz")
 root.geometry("300x300")
 
 def results_clicker():
-    global pop
-    pop = Toplevel(root)
-    pop.title("Game Results")
-    pop.geometry("250x150")
-    pop.config(bg= "green")
-
     if results() >= 5:
+        global pop
+        pop = Toplevel(root)
+        pop.title("Game Results")
+        pop.geometry("250x150")
+        pop.config(bg= "green")
         global nigel
-        nigel = PhotoImage(file= 'Nigel.png') 
+        nigel = PhotoImage(file= 'Nigel.png')
         nigel_label = Label(image= nigel)
         nigel_label.pack()
         pop_label = Label (pop, text="Congratulations!\nYou survived Jumanji.", bg= "green", fg= "white", font= ("arial", 12))
@@ -138,18 +137,24 @@ def results_clicker():
 
         nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
         nigel_pic.grid(row=0, column=0, padx=10)
+        
 
         okay= Button(my_frame, text= "Okay", command = my_frame.quit)
         okay.grid(row= 0, column=1, padx=10)
     elif results() < 5:
+        global popup
+        popup = Toplevel(root)
+        popup.title("Game Results")
+        popup.geometry("250x150")
+        popup.config(bg= "black")
         global russell
-        russell = PhotoImage(file='Russell.png')
+        russell= ImageTk.PhotoImage(file= 'Russell.jpg')
         russell_label = Label(image= russell)
         russell_label.pack()
-        pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
+        pop_2_label = Label (popup, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
         pop_2_label.pack(pady=10)
 
-        my_2_frame = Frame(pop, bg= "black")
+        my_2_frame = Frame(popup, bg= "black")
         my_2_frame.pack(pady=5)
 
         russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
