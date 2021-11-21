@@ -13,6 +13,8 @@ root.title("Can You Survive?: Jumanji Quiz")
 root.iconbitmap('jewel.jpg')
 root.geometry("300x300")
 
+results =3
+
 def results_clicker():
     global pop
     pop = Toplevel(root)
@@ -20,21 +22,38 @@ def results_clicker():
     pop.geometry("250x150")
     pop.config(bg= "green")
 
-    global nigel
-    nigel = PhotoImage(file= 'Nigel.png') #"https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png")
-    nigel_label = Label(image= nigel)
-    nigel_label.pack()
-    pop_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "green", fg= "white", font= ("arial", 12))
-    pop_label.pack(pady=10)
+    if results >= 5:
+        global nigel
+        nigel = PhotoImage(file= 'Nigel.png') #"https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png")
+        nigel_label = Label(image= nigel)
+        nigel_label.pack()
+        pop_label = Label (pop, text="Congratulations!\nYou survived Jumanji.", bg= "green", fg= "white", font= ("arial", 12))
+        pop_label.pack(pady=10)
 
-    my_frame = Frame(pop, bg= "green")
-    my_frame.pack(pady=5)
+        my_frame = Frame(pop, bg= "green")
+        my_frame.pack(pady=5)
 
-    nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
-    nigel_pic.grid(row=0, column=0, padx=10)
+        nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
+        nigel_pic.grid(row=0, column=0, padx=10)
 
-    okay= Button(my_frame, text= "Okay", command = my_frame.quit)
-    okay.grid(row= 0, column=1, padx=10)
+        okay= Button(my_frame, text= "Okay", command = my_frame.quit)
+        okay.grid(row= 0, column=1, padx=10)
+    elif results < 5:
+        global russell
+        russell = PhotoImage(file= 'Russell Van Pelt.jpg') #"https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png")
+        russell_label = Label(image= russell)
+        russell_label.pack()
+        pop2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "green", fg= "white", font= ("arial", 12))
+        pop2_label.pack(pady=10)
+
+        my_frame = Frame(pop, bg= "green")
+        my_frame.pack(pady=5)
+
+        russell_pic = Label(my_frame, image= russell, borderwidth=0)
+        russell_pic.grid(row=0, column=0, padx=10)
+
+        okay= Button(my_frame, text= "Okay", command = my_frame.quit)
+        okay.grid(row= 0, column=1, padx=10)
 
 
 
