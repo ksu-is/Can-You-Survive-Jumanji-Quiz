@@ -13,7 +13,7 @@ root.title("Can You Survive?: Jumanji Quiz")
 #root.iconbitmap('jewel.jpg')
 root.geometry("300x300")
 
-results =3
+results =5
 
 def results_clicker():
     global pop
@@ -35,12 +35,13 @@ def results_clicker():
 
         nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
         nigel_pic.grid(row=0, column=0, padx=10)
+        
 
         okay= Button(my_frame, text= "Okay", command = my_frame.quit)
         okay.grid(row= 0, column=1, padx=10)
     elif results < 5:
         global russell
-        russell = PhotoImage(file='Russell.jpg')
+        russell = PhotoImage(file='Russell.png')
         russell_label = Label(image= russell)
         russell_label.pack()
         pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
