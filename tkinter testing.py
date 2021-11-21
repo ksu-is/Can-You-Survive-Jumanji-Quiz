@@ -1,20 +1,30 @@
 from tkinter import *
 from PIL import ImageTk, Image
-#To use code, you must install Pillow and check to make sure tkinter is on your system
+from tkinter import messagebox
 
 
-print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
+#print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
 root = Tk()
 root.title("Can You Survive?: Jumanji Quiz")
-main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
-my_label= Label(image= main_img)
-my_label.pack()
-button_quit= Button(root, text= "Press Exit and return to quiz in terminal", command= root.quit)
-button_quit.pack()
-mainloop()
-character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+#main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
+#my_label= Label(image= main_img)
+#my_label.pack()
+#button_quit= Button(root, text= "Press Exit and return to quiz in terminal", command= root.quit)
+#button_quit.pack()
 
-#Characters to choose from and their characteristics
+#character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+
+correct = 3
+def results_click():
+    if correct >= 5:
+        #print(correct, "/10")
+        messagebox.showinfo("Results","Congratulations! You survived Jumanji.")
+    if correct <5:
+        #print(correct, "/10")
+        messagebox.showinfo("Results","Oh no! You didn't survive.\nBetter luck next time.")
+Button(root, text= "Results", command= results_click).pack()
+mainloop()
+    
 
 
 
