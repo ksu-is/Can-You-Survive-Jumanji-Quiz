@@ -6,19 +6,22 @@ To use code, you must install Pillow and check to make sure tkinter is on your s
 '''
 from tkinter import *
 from PIL import ImageTk, Image
-#import time and time.sleep() allows there to time between when the next line of code appears
 import time
+#import time and time.sleep() allows there to time between when the next line of code appears
 
 
 
 
 print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
+
+#Creates picture display for main characters
 root = Tk()
 root.title("Can You Survive?: Jumanji Quiz")
 main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
 welcome_label= Label(image= main_img)
 welcome_label.pack()
-button_quit= Button(root, text= "Press Exit sign in corner and return to quiz in terminal", command= root.quit)
+#Creates button that displays message with picture
+button_quit= Button(root, text= "Press Exit sign in corner and return to quiz in terminal")
 button_quit.pack()
 time.sleep(1)
 character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
@@ -108,6 +111,8 @@ def results():
     #if correct <5:
         #print(correct, "/10")
         #return"Oh no! You didn't survive.\nBetter luck next time."
+        
+#Calls function and makes output an integer
 int(results())
 
 #Variable that states the number of answers that have to be correct to win
