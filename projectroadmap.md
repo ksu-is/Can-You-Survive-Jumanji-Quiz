@@ -12,7 +12,9 @@ Evaluated code base:
 # Sprint 2:
 - [x] Begin coding
 - Make code for quiz questions
-- Research more repositories and tutorials
+- Research more repositories and tutorials:
+  [Tutorials](https://www.youtube.com/watch?v=yQSEXcf6s2I&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=2)
+
 - Look into databases to implement into project
 - [x] Make small updates and add commit messages
 - [x] Commit at least 6 code changes
