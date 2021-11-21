@@ -1,8 +1,12 @@
 '''
 A quiz that asks questions and determines whether the user would survive Jumanji
 '''
-import time
 #import time and time.sleep() allows there to time between when the next line of code appears
+#must install pillow to run code so that images appear
+import time
+from tkinter import *
+tkinter.messagebox.showinfo(title=None, message=None, **options)
+
 print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
 time.sleep(2)
 character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
