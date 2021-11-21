@@ -1,9 +1,14 @@
 '''
 A quiz that asks questions and determines whether the user would survive Jumanji
 '''
+'''
+To use code, you must install Pillow and check to make sure tkinter is on your system
+'''
+from tkinter import *
+from PIL import ImageTk, Image
 #import time and time.sleep() allows there to time between when the next line of code appears
 import time
-import tkinter as tk
+
 
 
 
