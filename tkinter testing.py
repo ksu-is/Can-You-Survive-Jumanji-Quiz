@@ -1,10 +1,10 @@
 from tkinter import *
 #from tkinter import filedialog
-from PIL import ImageTk, Image
+#from PIL import ImageTk, Image
 #from tkinter import messagebox
-import os
-cmd = "curl https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png -o Nigel.png "
-os.system(cmd)
+#import os
+#cmd = "curl https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png -o Nigel.png "
+#os.system(cmd)
 
 #Nigel_img = open('Nigel.png', 'r+')
 
