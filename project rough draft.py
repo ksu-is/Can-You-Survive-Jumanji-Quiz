@@ -2,7 +2,7 @@
 A quiz that asks questions and determines whether the user would survive Jumanji
 '''
 #import time and time.sleep() allows there to time between when the next line of code appears
-#must install pillow to run code so that images appear
+import tkinter
 import time
 from tkinter import *
 tkinter.messagebox.showinfo(title=None, message=None, **options)
