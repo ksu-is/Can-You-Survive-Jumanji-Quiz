@@ -52,9 +52,6 @@ def results_clicker():
         popup.config(bg= "black")
         global russell
         russell= ImageTk.PhotoImage(file= 'Russell.jpg')
-        #main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
-        #my_label= Label(image= main_img)
-        #my_label.pack()
         #russell = PhotoImage(file='Russell.png')
         russell_label = Label(image= russell)
         russell_label.pack()
