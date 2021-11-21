@@ -13,7 +13,14 @@ import time
 
 
 print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
-time.sleep(2)
+root = Tk()
+root.title("Can You Survive?: Jumanji Quiz")
+main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
+welcome_label= Label(image= main_img)
+welcome_label.pack()
+button_quit= Button(root, text= "Press Exit sign in corner and return to quiz in terminal", command= root.quit)
+button_quit.pack()
+time.sleep(1)
 character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
 
 #Characters to choose from and their characteristics
@@ -39,7 +46,7 @@ def characters(character_choice):
         print("You are Franklin Finbar 'Mouse'")
         print("Strengths:", strengths, "\nWeakness: ", weakness)       
 characters(character_choice)
-time.sleep(4)
+time.sleep(2)
     
 print("Now let the quiz begin.", "\nChoose a letter for each question.")
 time.sleep(1)
@@ -94,12 +101,69 @@ def results():
         correct +=1
     if question_10 == answer_10:
         correct +=1
-    if correct >= 5:
+    return correct
+    #if correct >= 5:
         #print(correct, "/10")
-        return "Congratulations! You survived Jumanji."
-    if correct <5:
+        #return "Congratulations! You survived Jumanji."
+    #if correct <5:
         #print(correct, "/10")
-        return"Oh no! You didn't survive.\nBetter luck next time."
-print(results())
-time.sleep(1)
+        #return"Oh no! You didn't survive.\nBetter luck next time."
+int(results())
+
+#Variable that states the number of answers that have to be correct to win
+#str(you_survived = 5)
+
+#Creating message box for results
+root = Tk()
+root.title("Can You Survive?: Jumanji Quiz")
+root.geometry("300x300")
+
+def results_clicker():
+    global pop
+    pop = Toplevel(root)
+    pop.title("Game Results")
+    pop.geometry("250x150")
+    pop.config(bg= "green")
+
+    if results() >= 5:
+        global nigel
+        nigel = PhotoImage(file= 'Nigel.png') 
+        nigel_label = Label(image= nigel)
+        nigel_label.pack()
+        pop_label = Label (pop, text="Congratulations!\nYou survived Jumanji.", bg= "green", fg= "white", font= ("arial", 12))
+        pop_label.pack(pady=10)
+
+        my_frame = Frame(pop, bg= "green")
+        my_frame.pack(pady=5)
+
+        nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
+        nigel_pic.grid(row=0, column=0, padx=10)
+
+        okay= Button(my_frame, text= "Okay", command = my_frame.quit)
+        okay.grid(row= 0, column=1, padx=10)
+    elif results() < 5:
+        global russell
+        russell = PhotoImage(file='Russell.png')
+        russell_label = Label(image= russell)
+        russell_label.pack()
+        pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
+        pop_2_label.pack(pady=10)
+
+        my_2_frame = Frame(pop, bg= "black")
+        my_2_frame.pack(pady=5)
+
+        russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
+        russell_pic.grid(row=0, column=0, padx=10)
+
+        okay_2= Button(my_2_frame, text= "Okay", command = my_2_frame.quit)
+        okay_2.grid(row= 0, column=1, padx=10)
+
+results_button= Button(root, text= "Results", command= results_clicker)
+results_button.pack(pady=50)
+
+my_label = Label(root, text= "")
+my_label.pack(pady=20)
+
+root.mainloop()
+
 print("Thanks for playing.")    
