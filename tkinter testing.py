@@ -49,8 +49,8 @@ def results_clicker():
         my_2_frame = Frame(pop, bg= "black")
         my_2_frame.pack(pady=5)
 
-        #russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
-        #russell_pic.grid(row=0, column=0, padx=10)
+        russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
+        russell_pic.grid(row=0, column=0, padx=10)
 
         okay_2= Button(my_2_frame, text= "Okay", command = my_2_frame.quit)
         okay_2.grid(row= 0, column=1, padx=10)
