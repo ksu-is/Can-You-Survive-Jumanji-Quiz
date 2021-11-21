@@ -1,6 +1,6 @@
 from tkinter import *
 #from tkinter import filedialog
-#from PIL import ImageTk, Image
+from PIL import ImageTk, Image
 #from tkinter import messagebox
 #import os
 #cmd = "curl https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png -o Nigel.png "
@@ -13,16 +13,21 @@ root.title("Can You Survive?: Jumanji Quiz")
 #root.iconbitmap('jewel.jpg')
 root.geometry("300x300")
 
-results =5
+results =3
 
 def results_clicker():
-    global pop
-    pop = Toplevel(root)
-    pop.title("Game Results")
-    pop.geometry("250x150")
-    pop.config(bg= "green")
+    #global pop
+    #pop = Toplevel(root)
+    #pop.title("Game Results")
+    #pop.geometry("250x150")
+    #pop.config(bg= "green")
 
     if results >= 5:
+        global pop
+        pop = Toplevel(root)
+        pop.title("Game Results")
+        pop.geometry("250x150")
+        pop.config(bg= "green")
         global nigel
         nigel = PhotoImage(file= 'Nigel.png') #"https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png")
         nigel_label = Label(image= nigel)
@@ -40,14 +45,23 @@ def results_clicker():
         okay= Button(my_frame, text= "Okay", command = my_frame.quit)
         okay.grid(row= 0, column=1, padx=10)
     elif results < 5:
+        global popup
+        popup = Toplevel(root)
+        popup.title("Game Results")
+        popup.geometry("250x150")
+        popup.config(bg= "black")
         global russell
-        russell = PhotoImage(file='Russell.png')
+        russell= ImageTk.PhotoImage(file= 'Russell.jpg')
+        #main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
+        #my_label= Label(image= main_img)
+        #my_label.pack()
+        #russell = PhotoImage(file='Russell.png')
         russell_label = Label(image= russell)
         russell_label.pack()
-        pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
+        pop_2_label = Label (popup, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
         pop_2_label.pack(pady=10)
 
-        my_2_frame = Frame(pop, bg= "black")
+        my_2_frame = Frame(popup, bg= "black")
         my_2_frame.pack(pady=5)
 
         russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
