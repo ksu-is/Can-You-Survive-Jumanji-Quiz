@@ -1,11 +1,89 @@
 from tkinter import *
+#from tkinter import filedialog
 from PIL import ImageTk, Image
-from tkinter import messagebox
+#from tkinter import messagebox
+import os
+cmd = "curl https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png -o Nigel.png "
+os.system(cmd)
+
+#Nigel_img = open('Nigel.png', 'r+')
+
+root = Tk()
+root.title("Can You Survive?: Jumanji Quiz")
+root.iconbitmap('jewel.jpg')
+root.geometry("300x300")
+
+def results_clicker():
+    global pop
+    pop = Toplevel(root)
+    pop.title("Game Results")
+    pop.geometry("250x150")
+    pop.config(bg= "green")
+
+    global nigel
+    nigel = PhotoImage(file= 'Nigel.png') #"https://github.com/ksu-is/Can-You-Survive-Jumanji-Quiz/blob/main/Nigel.png")
+    nigel_label = Label(image= nigel)
+    nigel_label.pack()
+    pop_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "green", fg= "white", font= ("arial", 12))
+    pop_label.pack(pady=10)
+
+    my_frame = Frame(pop, bg= "green")
+    my_frame.pack(pady=5)
+
+    nigel_pic = Label(my_frame, image= nigel, borderwidth=0)
+    nigel_pic.grid(row=0, column=0, padx=10)
+
+    okay= Button(my_frame, text= "Okay", command = my_frame.quit)
+    okay.grid(row= 0, column=1, padx=10)
+
+
+
+
+
+
+
+results_button= Button(root, text= "Results", command= results_clicker)
+results_button.pack(pady=50)
+
+my_label = Label(root, text= "")
+my_label.pack(pady=20)
+
+
+
+
+root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #print("Welcome to the Jumanji Quiz!", "\nThis quiz will test whether you could survive Jumanji.")
-root = Tk()
-root.title("Can You Survive?: Jumanji Quiz")
+#root = Tk()
+#root.title("Can You Survive?: Jumanji Quiz")
 #main_img= ImageTk.PhotoImage(Image.open("maincharacters.jpg"))
 #my_label= Label(image= main_img)
 #my_label.pack()
@@ -14,19 +92,19 @@ root.title("Can You Survive?: Jumanji Quiz")
 
 #character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
 
-correct = 3
-def results_click():
-    if correct >= 5:
+#correct = 3
+#def results_click():
+    #if correct >= 5:
         #print(correct, "/10")
-        win= messagebox.showinfo("Results","Congratulations! You survived Jumanji.")
+       # win= messagebox.showinfo("Results","Congratulations! You survived Jumanji.")
         
-    if correct <5:
+   # if correct <5:
         #print(correct, "/10")
-        lose= messagebox.showinfo("Results","Oh no! You didn't survive.\nBetter luck next time.")
+        #lose= messagebox.showinfo("Results","Oh no! You didn't survive.\nBetter luck next time.")
         
-results_button= Button(root, text= "Results", command= results_click).pack()
+#results_button= Button(root, text= "Results", command= results_click).pack()
 #results_button.geometry("350x350")
-mainloop()
+#mainloop()
     
 
 
