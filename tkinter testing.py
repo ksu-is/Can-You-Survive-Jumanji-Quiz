@@ -40,17 +40,17 @@ def results_clicker():
         okay.grid(row= 0, column=1, padx=10)
     elif results < 5:
         global russell
-        russell = PhotoImage(file= 'Russell.jpg') 
+        russell = PhotoImage(file='Russell.jpg')
         russell_label = Label(image= russell)
         russell_label.pack()
-        pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "green", fg= "white", font= ("arial", 12))
+        pop_2_label = Label (pop, text="Oh no! You didn't survive.\nBetter luck next time.", bg= "black", fg= "white", font= ("arial", 12))
         pop_2_label.pack(pady=10)
 
-        my_2_frame = Frame(pop, bg= "green")
+        my_2_frame = Frame(pop, bg= "black")
         my_2_frame.pack(pady=5)
 
-        russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
-        russell_pic.grid(row=0, column=0, padx=10)
+        #russell_pic = Label(my_2_frame, image= russell, borderwidth=0)
+        #russell_pic.grid(row=0, column=0, padx=10)
 
         okay_2= Button(my_2_frame, text= "Okay", command = my_2_frame.quit)
         okay_2.grid(row= 0, column=1, padx=10)
@@ -72,7 +72,7 @@ my_label.pack(pady=20)
 
 root.mainloop()
 
-
+print("Thanks for playing!")
 
 
 
