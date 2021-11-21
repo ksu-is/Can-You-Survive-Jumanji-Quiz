@@ -5,4 +5,4 @@ What the program does: The quiz is based off of the Jumanji video game as seen i
 
 Users: This quiz is for individuals who are interested in the Jumanji franchise or just like fun quizzes.
 
-How to use: To play game run Final draft.py file. Make sure to follow installation instructions at top of file. Have fun!
+How to use: To play game clone project and run Final draft.py file. Make sure to follow installation instructions at top of file. Have fun!
