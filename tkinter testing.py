@@ -18,11 +18,14 @@ correct = 3
 def results_click():
     if correct >= 5:
         #print(correct, "/10")
-        messagebox.showinfo("Results","Congratulations! You survived Jumanji.")
+        win= messagebox.showinfo("Results","Congratulations! You survived Jumanji.")
+        
     if correct <5:
         #print(correct, "/10")
-        messagebox.showinfo("Results","Oh no! You didn't survive.\nBetter luck next time.")
-Button(root, text= "Results", command= results_click).pack()
+        lose= messagebox.showinfo("Results","Oh no! You didn't survive.\nBetter luck next time.")
+        
+results_button= Button(root, text= "Results", command= results_click).pack()
+#results_button.geometry("350x350")
 mainloop()
     
 
