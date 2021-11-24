@@ -3,6 +3,7 @@ A quiz that asks questions and determines whether the user would survive Jumanji
 '''
 '''
 To use code, you must install Pillow and check to make sure tkinter is on your system
+For code to run, make sure you have the whole folder open and not just the Final draft.py file
 '''
 from tkinter import *
 from PIL import ImageTk, Image
