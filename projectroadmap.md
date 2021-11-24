@@ -20,7 +20,7 @@ Evaluated code base:
 - [x] Commit at least 6 code changes
 - [x] Track progress in project road map
 # Sprint 3:
-- [ ] Continue coding, refining, and testing
+- [x] Continue coding, refining, and testing
 - [ ] Create one powerpoint slide introducing project
 - [ ] Upload PPT slide to Github and D2L
 # Final Presentation:
