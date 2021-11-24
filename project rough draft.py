@@ -28,6 +28,7 @@ character_choice = input("Which character do you want to play as (Choose a lette
 
 #Characters to choose from and their characteristics
 def characters(character_choice):
+    #character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
     if character_choice== "A":
         strengths = "Fearless, Climbing, Speed, Boomerang, Smoldering Intensity"
         weakness = "None"
@@ -48,6 +49,10 @@ def characters(character_choice):
         weakness= "Cake, Speed, Strength"
         print("You are Franklin Finbar 'Mouse'")
         print("Strengths:", strengths, "\nWeakness: ", weakness)       
+    #else:
+        #print("Wrong input. Try again")
+        #character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+
 characters(character_choice)
 time.sleep(2)
     
