@@ -29,6 +29,7 @@ character_choice = input("Which character do you want to play as (Choose a lette
 #Characters to choose from and their characteristics
 def characters(character_choice):
     #character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+    #while character_choice:
     if character_choice== "A":
         strengths = "Fearless, Climbing, Speed, Boomerang, Smoldering Intensity"
         weakness = "None"
@@ -48,11 +49,17 @@ def characters(character_choice):
         strengths= "Zoology, Weapons Valet"
         weakness= "Cake, Speed, Strength"
         print("You are Franklin Finbar 'Mouse'")
-        print("Strengths:", strengths, "\nWeakness: ", weakness)       
-    #else:
+        print("Strengths:", strengths, "\nWeakness: ", weakness)   
+    #elif character_choice > "D":
+        #print("Wrong input, Try again")
+       # return character_choice #= input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+           # break
+    #ltrs = ["A,B,C,D"]    
+    #if character_choice != ltrs:
         #print("Wrong input. Try again")
-        #character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
-
+       # character_choice = input("Which character do you want to play as (Choose a letter)?:\nA)Dr.Smoulder Bravestone\nB)Ruby Roundhouse\nC)Professor Shelly Oberon\nD)Franklin Finbar 'Mouse'\n").upper()
+    #else:
+      #  pass
 characters(character_choice)
 time.sleep(2)
     
