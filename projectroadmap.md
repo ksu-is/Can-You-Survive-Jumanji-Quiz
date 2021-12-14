@@ -25,7 +25,7 @@ Evaluated code base:
 - [x] Upload PPT slide to Github and D2L
 # Final Presentation:
 - [x] Schedule presentation in Teams Project channel
-- [ ] Record presentation in the Teams Project channel
-- [ ] Post screenshot of presentation, presentation link, and PPT in D2L
+- [x] Record presentation in the Teams Project channel
+- [x] Post screenshot of presentation, presentation link, and PPT in D2L
 
 
